@@ -97,7 +97,7 @@ def reset_game ():
     global game_update_frames, game_update_timer, snakes, paused, game_over, fruit, cut_update_frames, game_time, cherries, DISPLAY, cuts, fips
     DISPLAY.fill((255, 255, 255))
     game_update_frames = fps / 4  # wait how many frames before updating snake
-    cut_update_frames = fps * 10 # number of frames per fruit generation
+    cut_update_frames = fps * 10 # number of frames per scissor generation
     game_time = 0 # game time in frames
     game_update_timer = 0 # timer for updating scren
     snakes = [Snake([0, i]) for i in range(GAME_STATE['players'])]
@@ -213,7 +213,7 @@ while True:
         if paused:
             txt.drawToSurface(DISPLAY, (WIDTH/2, HEIGHT/2), "||", 60, (200, 200, 200))
 
-        if game_time % cut_update_frames == 0:
+        if game_time % cut_update_frames == cut_update_frames - 1:
             gen_cut()
     else:
         DISPLAY.fill((200, 200, 200))
