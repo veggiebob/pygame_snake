@@ -1,0 +1,8 @@
+Key Requirements:
+# Window must be resizable by the user with constant proportions
+ - A game mode where the snake only grows
+ - A game mode where the snake grows and moves faster
+ - A game mode with 2 snakes that play at the same time
+   A game mode with items that the snake(s) can pick up:
+   Example: An item that makes the snake reduce in length
+   Example: An item that freezes a snake in place for a certain amount of time
